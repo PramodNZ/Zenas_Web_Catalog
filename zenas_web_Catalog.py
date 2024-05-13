@@ -18,7 +18,7 @@ st.write("The name on your order will be:", name_on_order)
 # st.dataframe(data=my_dataframe, use_container_width=True)
 # st.stop()
 
-my_cnx = snowflake.connector.connect(**streamlit.secrets["snowflake"])
+my_cnx = connections.snowflake.connector.connect(**streamlit.secrets["snowflake"])
 my_cur = my_cnx.cursor()
 # my_cur.execute("SELECT CURRENT_USER(), CURRENT_ACCOUNT(),
 # CURRENT_REGION()")
