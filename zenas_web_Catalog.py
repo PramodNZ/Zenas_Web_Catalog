@@ -12,7 +12,7 @@ st.write(
 name_on_order = st.text_input("Name on Order:")
 st.write("The name on your order will be:", name_on_order)
 
-my_cnx = snowflake.connector.connect(**st.secrets["snowflake"])
+my_cnx = connector.connect(**st.secrets["snowflake"])
 my_cur = my_cnx.cursor()
 # my_cur.execute("SELECT CURRENT_USER(), CURRENT_ACCOUNT(),
 # CURRENT_REGION()")
